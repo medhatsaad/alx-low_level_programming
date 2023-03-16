@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * first c program
+ *main  first c program
+ *Return return 1
  */
 int main(void)   
 {
