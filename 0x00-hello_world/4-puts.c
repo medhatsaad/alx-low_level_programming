@@ -3,7 +3,7 @@
 /**
  * first c program
  */
-int main(void)   // puts
+int main(void)   
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
 
