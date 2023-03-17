@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - 
- * Return:
+ * main - combination of two numbers
+ * Return: 0 is ok
  */
 int main(void)
 {
@@ -11,11 +11,11 @@ int main(void)
 
 	for (n = 0; n < 10; n++)
 		{
-		for (m = n+1; m < 10; m++)
+		for (m = n + 1; m < 10; m++)
 			{
 			putchar(n + '0');
 			putchar(m + '0');
-			if( !(n == 8 && m == 9))
+			if (!(n == 8 && m == 9))
 				{
 				putchar(',');
 				putchar(' ');
@@ -23,4 +23,5 @@ int main(void)
 			}
 		}
 	putchar('\n');
-	return(0);}
+	return (0);
+}
