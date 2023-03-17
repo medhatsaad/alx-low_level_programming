@@ -13,8 +13,8 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	int m = n % 10;
-	printf("%i \n",m);
+       	/* your code goes there */
+	m = n % 10;
+	printf("%i \n", m);
 	return (0);
 }
