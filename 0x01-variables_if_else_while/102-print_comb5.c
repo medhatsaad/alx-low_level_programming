@@ -20,6 +20,14 @@ void print2num(int r)
 }
 
 /**
+ *
+ */
+void printsp(void)
+{
+	putchar(' ');
+}
+
+/**
  * main - combination of two numbers
  * Return: 0 is ok
  */
@@ -33,13 +41,15 @@ int main(void)
 		for (m = n + 1; m <= 99; m++)
 		{
 			print2num(n);
+			printsp();
 			print2num(m);
 			if (!(n == 98 && m == 99))
 			{
 				putchar(',');
-				putchar(' ');
 			}
+			printsp();
 		}
+
 		}
 	putchar('\n');
 	return (0);
