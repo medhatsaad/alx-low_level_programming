@@ -3,7 +3,7 @@
 
 /**
  * print2num - print in 2 numbers format
- * r: integer
+ * R: integer to do
  */
 void print2num(int r)
 {
@@ -20,7 +20,7 @@ void print2num(int r)
 }
 
 /**
- *
+ * printsp - print space
  */
 void printsp(void)
 {
