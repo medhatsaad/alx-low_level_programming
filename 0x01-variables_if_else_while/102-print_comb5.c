@@ -3,12 +3,11 @@
 
 /**
  * print2num - print in 2 numbers format
- *
+ * r: integer
  */
 void print2num(int r)
 {
-	putchar(' ');
-	if ( r <=9 )
+	if (r <= 9)
 	{
 		putchar('0');
 		putchar(r + '0');
@@ -28,7 +27,7 @@ int main(void)
 {
 	int n;
 	int m;
-	
+
 	for (n = 0; n <= 99; n++)
 		{
 		for (m = n + 1; m <= 99; m++)
@@ -38,8 +37,9 @@ int main(void)
 			if (!(n == 98 && m == 99))
 			{
 				putchar(',');
-					}
+				putchar(' ');
 			}
+		}
 		}
 	putchar('\n');
 	return (0);
