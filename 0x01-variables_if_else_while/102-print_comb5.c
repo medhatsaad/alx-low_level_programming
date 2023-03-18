@@ -1,5 +1,25 @@
 #include <stdio.h>
 
+
+/**
+ * print2num - print in 2 numbers format
+ *
+ */
+void print2num(int r)
+{
+	putchar(' ');
+	if ( r <=9 )
+	{
+		putchar('0');
+		putchar(r + '0');
+	}
+	else 
+	{
+		putchar((r / 10) + '0');
+		putchar((r % 10) + '0');
+	}
+}
+
 /**
  * main - combination of two numbers
  * Return: 0 is ok
@@ -8,22 +28,6 @@ int main(void)
 {
 	int n;
 	int m;
-
-	void print2num(int r)
-	{
-		putchar(' ');
-		if ( r <=9 )
-		{
-			putchar('0');
-			putchar(r + '0');
-		}
-		else 
-		{
-			putchar((r / 10) + '0');
-			putchar((r % 10) + '0');
-		}
-	}
-
 	
 	for (n = 0; n <= 99; n++)
 		{
