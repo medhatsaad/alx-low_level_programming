@@ -11,8 +11,7 @@ void print2num(int r)
 	{
 		putchar('0');
 		putchar(r + '0');
-	}	
-	else 
+	}else 
 	{
 		putchar((r / 10) + '0');
 		putchar((r % 10) + '0');
