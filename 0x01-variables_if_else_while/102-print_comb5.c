@@ -3,7 +3,7 @@
 
 /**
  * print2num - print in 2 numbers format
- * R: integer to do
+ * @r: integer to do
  */
 void print2num(int r)
 {
