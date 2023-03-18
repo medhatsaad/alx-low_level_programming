@@ -16,7 +16,7 @@ void print2num(int r)
 	{
 		putchar((r / 10) + '0');
 		putchar((r % 10) + '0');
-	}		
+	}
 }
 
 
