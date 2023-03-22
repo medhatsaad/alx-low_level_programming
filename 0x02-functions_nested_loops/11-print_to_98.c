@@ -12,7 +12,7 @@ void print_to_98(int n)
 		{
 			printf("98\n");
 			break;
-		}	
+		}
 		else if (n < 0)
 		{
 			printf("%d, ", n);
