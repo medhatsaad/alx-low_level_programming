@@ -30,8 +30,8 @@ void myprint(int m)
 			{
 				_putchar(' ');
 				_putchar(' ');
-				_putchar('0' + ten );
-				_putchar('0' + unit );
+				_putchar('0' + ten);
+				_putchar('0' + unit);
 			}
 		}	
 		else
