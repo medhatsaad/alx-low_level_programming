@@ -12,17 +12,19 @@ void times_table(void)
 	{
 		for (time = 0; time < 10; time++)
 		{
-			if ((num * time) / 10 == 0)
+			if (time == 0)
+				_putchar('0');
+			else if	((num * time) / 10 == 0)
 				_putchar(' ');
+				_putchar('0' + (num * time) % 10);
 			else
 				_putchar('0' + (num * time) / 10);
-			_putchar('0' + (num * time) % 10);
+				_putchar('0' + (num * time) % 10);
 			if (time != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-		
 		}
 		_putchar('\n');
 	}
