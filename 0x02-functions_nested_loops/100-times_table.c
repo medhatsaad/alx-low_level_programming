@@ -31,13 +31,13 @@ void myprint(int m)
 				_putchar(' ');
 				_putchar('0' + ten);
 			}
-		}	
+		}
 		else
 		{
 			_putchar(' ');
 			_putchar('0' + hundrid);
 			_putchar('0' + ten);
-		}	
+		}
 	}
 	else
 	{
