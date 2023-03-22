@@ -12,7 +12,7 @@ void times_table(void)
 	{
 		for (time = 0; time < 10; time++)
 		{
-			if ( (num * time) / 10 == 0)
+			if ((num * time) / 10 == 0)
 				_putchar(' ');
 			else
 				_putchar('0' + (num * time) / 10);
@@ -22,8 +22,6 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else
-				_putchar('\n');
 		}
 	}
 }
