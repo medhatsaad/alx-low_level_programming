@@ -71,7 +71,7 @@ void print_times_table(int n)
 					_putchar(',');
 				}
 				else
-				{	
+			}
 					myprint(m);
 					_putchar(',');
 				}
