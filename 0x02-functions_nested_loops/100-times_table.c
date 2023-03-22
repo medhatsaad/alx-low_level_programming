@@ -24,14 +24,12 @@ void myprint(int m)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar('0' + unit);
 			}
 			else
 			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + ten);
-				_putchar('0' + unit);
 			}
 		}	
 		else
@@ -39,7 +37,6 @@ void myprint(int m)
 			_putchar(' ');
 			_putchar('0' + hundrid);
 			_putchar('0' + ten);
-			_putchar('0' + unit);
 		}	
 	}
 	else
@@ -47,8 +44,8 @@ void myprint(int m)
 		_putchar('0' + thousand);
 		_putchar('0' + hundrid);
 		_putchar('0' + ten);
-		_putchar('0' + unit);
 	}
+	_putchar('0' + unit);
 }
 
 /**
