@@ -1,9 +1,6 @@
 #include "main.h"
 
 /**
- * print_times_table - time table
- * @n: int
- *
  * myprint - print 4 digits
  * @m: int
 */
@@ -54,6 +51,10 @@ void myprint(int m)
 	}
 }
 
+/**
+ * print_times_table - time table
+ * @n: int
+ */
 void print_times_table(int n)
 {
 	int time;
