@@ -1,5 +1,4 @@
 # include <stdio.h>
-# include <stdint.h>
 
 /**
  * main - print first 50 fib no start with 1,3
@@ -8,9 +7,9 @@
 int main(void)
 {
 	int n;
-	int64_t f1;
-	int64_t f2;
-	int64_t f3;
+	long f1;
+	long f2;
+	long f3;
 
 	f1 = 1;
 	f2 = 2;
@@ -21,7 +20,7 @@ int main(void)
 		f3 = f1 + f2;
 		printf("%lu", f3);
 		n++;
-		if (n <98)
+		if (n < 98)
 			printf(", ");
 		else
 			printf("\n");
