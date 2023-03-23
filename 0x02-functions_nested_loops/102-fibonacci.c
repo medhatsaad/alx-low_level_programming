@@ -20,9 +20,7 @@ int main(void)
 		f3 = f1 + f2;
 		printf("%lu", f3);
 		n++;
-		if (n == 50)
-			printf("\n");
-		else
+		if (n < 50)
 			printf(", ");
 		f1 = f2;
 		f2 = f3;
