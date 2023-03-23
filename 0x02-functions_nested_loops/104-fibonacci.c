@@ -16,7 +16,7 @@ int main(void)
 	f2 = 2;
 	n = 2;
 	printf("1, 2, ");
-	while (n < 98)
+	while (n <= 98)
 	{
 		f3 = f1 + f2;
 		printf("%lu", f3);
