@@ -9,7 +9,7 @@ int main(void)
 	long f1;
 	long f2;
 	long f3;
-	long long sum;
+	long sum;
 
 	f1 = 1;
 	f2 = 2;
@@ -27,6 +27,6 @@ int main(void)
 		f1 = f2;
 		f2 = f3;
 	}
-	printf("%llu\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
