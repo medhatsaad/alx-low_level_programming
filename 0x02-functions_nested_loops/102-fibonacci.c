@@ -14,7 +14,7 @@ int main(void)
 	f1 = 1;
 	f2 = 2;
 	n = 2;
-	printf("1, 2,  ");
+	printf("1, 2, ");
 	while (n < 50)
 	{
 		f3 = f1 + f2;
@@ -22,6 +22,8 @@ int main(void)
 		n++;
 		if (n < 50)
 			printf(", ");
+		else
+			printf("\n");
 		f1 = f2;
 		f2 = f3;
 	}
