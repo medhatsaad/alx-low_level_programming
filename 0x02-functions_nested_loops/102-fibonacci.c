@@ -18,7 +18,7 @@ int main(void)
 	while(n <= 50)
 	{
 		f3 = f1 + f2;
-		printf("%d", f3);
+		printf("%lu", f3);
 		n++;
 		if (n == 50)
 			printf("\n");
