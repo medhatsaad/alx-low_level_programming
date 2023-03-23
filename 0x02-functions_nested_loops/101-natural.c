@@ -7,7 +7,7 @@ int main(void)
 {
 	int sum;
 	int i;
-	
+
 	sum = 0;
 	for (i = 0; i < 1024; i++)
 	{
@@ -16,7 +16,7 @@ int main(void)
 		else if (i % 5 == 0)
 			sum += i;
 	}
-	printf("%d\n",sum);	
+	printf("%d\n", sum);	
 	return (0);
 
 }
