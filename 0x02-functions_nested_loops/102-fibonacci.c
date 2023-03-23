@@ -11,22 +11,19 @@ int main(void)
 	int f2;
 	int f3;
 
-	f1 = 0;
-	f2 = 1;
-	n = 1;
-	printf("1, ");
+	f1 = 1;
+	f2 = 2;
+	n = 2;
+	printf("1, 2,  ");
 	while(n <= 50)
 	{
 		f3 = f1 + f2;
-		if (f3 % 10 == 1 || f3 % 10 == 2)
-		{
-			printf("%d", f3);
-			n++;
-			if (n == 50)
-				printf("\n");
-			else
-				printf(", ");
-		}
+		printf("%d", f3);
+		n++;
+		if (n == 50)
+			printf("\n");
+		else
+			printf(", ");
 		f1 = f2;
 		f2 = f3;
 	}
