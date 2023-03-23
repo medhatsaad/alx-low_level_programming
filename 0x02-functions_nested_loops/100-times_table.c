@@ -75,11 +75,11 @@ void print_times_table(int n)
 					myprint(m);
 					_putchar(',');
 				}
-			}	
+			}
 			myprint(i * n);
 			_putchar('\n');
 		}
-	}	
+	}
 	else if (n == 0)
 	{
 		_putchar('0');
