@@ -1,5 +1,4 @@
 # include <stdio.h>
-# include <stdint.h>
 
 /**
  * main - print first 50 fib no start with 1,3
@@ -8,9 +7,9 @@
 int main(void)
 {
 	int n;
-	int64_t f1;
-	int64_t f2;
-	int64_t f3;
+	unsigned long f1;
+	unsigned long f2;
+	unsigned long f3;
 
 	f1 = 1;
 	f2 = 2;
