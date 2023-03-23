@@ -30,4 +30,5 @@ int main(void)
 		f1 = f2;
 		f2 = f3;
 	}
+	return (0);
 }
