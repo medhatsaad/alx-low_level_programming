@@ -2,7 +2,7 @@
 # include <stdio.h>
 
 /**
- * _stropy - copy string
+ * _strcpy - copy string
  *
  * @dest: dstination string
  * @src: source string
