@@ -11,12 +11,10 @@ int _atoi(char *s)
 {
 	char *letter = s;	
 	int size = 0;
-
 	int num = 0;
-	int value = 0;
 	int i;
 	int j = 0;
-	int k = 10;
+	int k = 1;
 
 	while (*letter != '\0')
 	{
@@ -30,23 +28,17 @@ int _atoi(char *s)
 	{
 		if (*letter >= 48 && *letter <= 57)
 		{
+		        
 			if (j == 0)
 			{
-				value = *letter - 48;
-				num = num + value;
+				num = *letter - 48;
 				j++;
 			}
 			else
 			{
-				value = ((*letter - 48) * k);
-				num = num + value;
-				k = k * 10;
+				num = num + ((*letter - 48) * 10 * k);
+				k++;
 			}
-		}
-		else
-		{
-			if (*letter == 45)
-				num = -num;
 		}
 		letter--;
 	}
