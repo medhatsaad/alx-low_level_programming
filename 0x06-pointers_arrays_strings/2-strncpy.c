@@ -13,11 +13,12 @@ char *_strncpy(char *dest, char *src, int n)
 	int srcsize = 0;
 	char *start = dest;
 	char *pen = src;
+	char *c = src;
 
-	while (*src != '\0')
+	while (*c != '\0')
 	{
 		srcsize++;
-		n++;
+		c++;
 	}
 
 	for (i = 0; i < n; i++)
