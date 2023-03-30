@@ -34,6 +34,7 @@ char *_strncat(char *dest, char *src, int n)
 		start++;
 		end++;
 	}
+	*start = '\0';
 
 	return (dest);
 }
