@@ -9,29 +9,12 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	/** char *n = s1;
-	char *p = s2;
+	int i;
 
-	while (*n != '\0')
+	for (i = 0; s1[i] == s2[i]; i++)
 	{
-		if (*p == '\0')
-			return (15);
-		else if (*n > *p)
-			return (15);
-		else if (*n < *p)
-			return (-15);
-		n++;
-		p++;
+		if (s1[i] == '\0')
+		return (0);
 	}
-
-	if (*p != '\0')
-		return (-15);
-	else
-		return (0); */
-    int i;
-
-    for (i = 0; s1[i] == s2[i]; i++)
-        if (s1[i] == '\0')
-            return 0;
-    return s1[i] - s2[i];
+	return (s1[i] - s2[i]);
 }
