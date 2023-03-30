@@ -14,12 +14,12 @@ char *leet(char *a)
 
 	for (j = 0; a[j] != '\0'; j++)
 	{
-		for (k =0; list[k] != '\0'; k++)
+		for (k = 0; list[k] != '\0'; k++)
 			if (a[j] == list[k])
 			{
 				a[j] = i[k];
 				break;
 			}
 	}
-	return (a);	
+	return (a);
 }
