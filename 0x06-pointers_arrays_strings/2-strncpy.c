@@ -29,7 +29,7 @@ char *_strncpy(char *dest, char *src, int n)
 			pen++;
 		}
 		else
-			*start = '0';
+			*start = '\0';
 		start++;
 	}
 	return (dest);
