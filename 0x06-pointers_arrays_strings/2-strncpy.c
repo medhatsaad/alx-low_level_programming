@@ -10,14 +10,20 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
-	int srcsize = strsize(src);
+	int srcsize = 0;
 	char *start = dest;
 	char *pen = src;
-		
-	for (i = 0; i < n; i++)
+
+	while (*src != '\0')
 	{
-		if ( i < srcsize)
-		{	
+		srcsize++;
+		n++;
+	}
+
+	for (i = 0; i < n; i++)
+
+		if (i < srcsize)
+		{
 			*start = *pen;
 			pen++;
 		}
@@ -26,22 +32,4 @@ char *_strncpy(char *dest, char *src, int n)
 		start++;
 	}
 	return (dest);
-}
-
-/**
- * strsize - return string size
- * @n: char pointer
- * Return: int
- */
-int strsize(char *n)
-{
-	int size;
-	
-	while (*n != '\0')
-	{
-		size++;
-		n++;
-	}
-
-	return (size);
 }
