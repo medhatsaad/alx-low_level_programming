@@ -1,7 +1,7 @@
 # include "main.h"
 /**
  * string_toupper - change all lower case to upper
- * @s: string
+ * @a: string
  *
  * Return: pointer to string
  */
