@@ -26,7 +26,6 @@ void print_buffer(char *b, int size)
 						printf("  ");
 					k++;
 				}
-				printf(" ");
 			}
 			k -= 10;
 			for (j = 0; j < 10; j++)
@@ -38,8 +37,6 @@ void print_buffer(char *b, int size)
 					else
 						printf(".");
 				}
-				else
-					printf(" ");
 				k++;
 			}
 			printf("\n");
