@@ -13,6 +13,9 @@ char *_strstr(char *haystack, char *needle)
 	int r = 0;
 	int n = 0;
 
+	if (needle[0] == '\0')
+		return (haystack);
+
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; needle[j] != '\0'; j++)
@@ -21,7 +24,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				if (j == 0)
 				{
-					n  = i;
+					n = i;
 					r = 1;
 				}
 			}
@@ -31,9 +34,7 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		if (j == 0)
-			return (haystack);
-		else if (r == 1)
+		if (r == 1)
 			return (haystack + n);
 	}
 	return ('\0');
