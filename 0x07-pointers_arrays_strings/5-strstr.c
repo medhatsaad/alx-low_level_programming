@@ -31,7 +31,9 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		if (r == 1)
+		if (j == 0)
+			return (haystack);
+		else if (r == 1)
 			return (haystack + n);
 	}
 	return ('\0');
