@@ -22,15 +22,18 @@ int  main(int argc, char **argv)
 	cents = atoi(argv[1]);
 	if (cents <= 0)
 		printf("0\n");
-	for (i = 0; coin[i] != '\0'; i++)
+	else
 	{
-		change += cents / coin[i];
-		reminder = cents % coin[i];
-		if (reminder)
-			cents = reminder;
-		else
-			break;
+		for (i = 0; coin[i] != '\0'; i++)
+		{
+			change += cents / coin[i];
+			reminder = cents % coin[i];
+			if (reminder)
+				cents = reminder;
+			else
+				break;
+		}
+		printf("%d\n", change);
 	}
-	printf("%d\n", change);
 	return (0);
 }
