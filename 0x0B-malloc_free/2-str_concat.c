@@ -15,8 +15,7 @@ char *str_concat(char *s1, char *s2)
 	int size2 = 0;
 	int size;
 	char *a;
-	if ((s1 == NULL) && (s2 == NULL))
-		return ('\0');
+
 	if (s1 != NULL)
 		for (i = 0; s1[i] != '\0'; i++)
 			size1++;
@@ -27,6 +26,9 @@ char *str_concat(char *s1, char *s2)
 	a = malloc(size * sizeof(char));
 	if (a)
 	{
+		if ((s1 == NULL) && (s2 == NULL))
+			a[0] = '\0';
+			return (a);
 		if (s1 != NULL)
 			for (i = 0; i < size1; i++)
 				a[i] = s1[i];
