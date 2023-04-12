@@ -27,8 +27,10 @@ char *str_concat(char *s1, char *s2)
 	if (a)
 	{
 		if ((s1 == NULL) && (s2 == NULL))
+		{
 			a[0] = '\0';
 			return (a);
+		}
 		if (s1 != NULL)
 			for (i = 0; i < size1; i++)
 				a[i] = s1[i];
