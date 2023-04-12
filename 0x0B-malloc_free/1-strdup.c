@@ -13,11 +13,12 @@ char *_strdup(char *str)
 	char *a;
 
 	if (*str == '\n')
-		return ("failed to allocate memory\n");
+		return ('\0');
 	for (i = 0; str[i] != '\0'; i++)
 		size++;
 	a = malloc(size * sizeof(char));
-
+	if (size == 1)
+		return ('\0');
 	if (a)
 	{
 		for (i = 0; i < size; i++)
