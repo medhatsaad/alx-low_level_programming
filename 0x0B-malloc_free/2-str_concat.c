@@ -1,7 +1,7 @@
 # include "main.h"
 # include <stdlib.h>
 /**
- * _str_concat - concat 2 strings
+ * str_concat - concat 2 strings
  * @s1: string
  * @s2: string
  *
