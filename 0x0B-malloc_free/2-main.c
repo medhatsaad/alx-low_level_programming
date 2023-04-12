@@ -10,14 +10,41 @@
 int main(void)
 {
     char *s;
-
+    printf("start\n");
     s = str_concat("Betty ", "Holberton");
     if (s == NULL)
     {
         printf("failed\n");
-        return (1);
     }
     printf("%s\n", s);
+    printf("start\n");
+    s = str_concat(NULL, NULL);
+    if (s == NULL)
+    {
+        printf("failed\n");
+    }
+    else 
+    	printf("%s\n", s);
+    printf("start\n");
+    s = str_concat("Betty ", NULL);
+    if (s == NULL)
+    {
+        printf("failed\n");
+    }
+    printf("%s\n", s);
+
+
+
+    printf("start\n");
+    s = str_concat(NULL, "Holberton");
+    if (s == NULL)
+    {
+        printf("failed\n");
+    }
+    printf("%s\n", s);
+
+        
+
     free(s);
     return (0);
 }
