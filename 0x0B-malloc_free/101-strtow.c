@@ -18,7 +18,7 @@ char **strtow(char *str)
 	int n = 0;
 	char **a;
 
-	if (str == NULL || str== "")
+	if (str == NULL )
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -34,6 +34,7 @@ char **strtow(char *str)
 			if (str[i] != ' ')
 				col++;
 			if (str[i] == ' ')
+			{
 				a[k] = (char *) malloc((col + 1) * sizeof(char));
 				if (a[k])
 				{
@@ -42,6 +43,7 @@ char **strtow(char *str)
 				}
 				else
 					return (NULL);
+			}
 		}
 
 		for (i = 0; str[i] != '\0'; i++)
@@ -58,7 +60,7 @@ char **strtow(char *str)
 				m++;
 			}
 		}
-			
+		return (a);		
 	}
 	else
 		return (NULL);
