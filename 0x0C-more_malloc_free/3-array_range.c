@@ -1,9 +1,10 @@
 # include "main.h"
 # include <stdlib.h>
 /**
- * array_range - 
- * @min:
- ^ @max:
+ * array_range - create int array and fill numbers btween min , max
+ * @min: min number
+ * @max: max number
+ * Return: array pointer
  */
 int *array_range(int min, int max)
 {
