@@ -15,9 +15,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int a, b, c, i;
 	int j = 0;
 	char *s;
-
-	if (s1 == NULL && s2 == NULL)
+	printf("in"); 
+	if ((s1 == NULL) && (s2 == NULL))
+	{
+		printf("Hi");
 		return (NULL);
+	}
 	if (s1 == NULL)
 		a = 0;
 	else
@@ -30,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		c = n;
 	else
 		c = b;
-	s = (char *) malloc(a + c + 1);
+	s = malloc(a + c + 1);
 	if (s)
 	{
 		if (s1 != NULL)
