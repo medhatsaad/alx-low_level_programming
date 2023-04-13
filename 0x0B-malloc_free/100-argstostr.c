@@ -23,10 +23,9 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			size++;
-		/**	printf("%c size:%d\n", av[i][j], size); **/
 		}
 	}
-	a = malloc((size + ac - 1) * sizeof(char));
+	a = malloc((size + ac - 1 ) * sizeof(char));
 	if (a)
 	{
 		for (i = 0; i < ac; i++)
