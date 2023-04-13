@@ -18,8 +18,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	a = getsize(s1);
-	b = getsize(s2);
+	if (s1 == NULL)
+		a = 0;
+	else
+		a = getsize(s1);
+	if (s2 == NULL)
+		b = 0;
+	else
+		b = getsize(s2);
 	if (n < b)
 		c = n;
 	else
