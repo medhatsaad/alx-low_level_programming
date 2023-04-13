@@ -18,6 +18,22 @@ char **strtow(char *str)
 	int n = 0;
 	char **a;
 
+/**
+ * get number of words 
+ * get size of each word
+ *
+ 
+
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
 	if (str == NULL )
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
