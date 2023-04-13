@@ -14,6 +14,8 @@ char **strtow(char *str)
 	int row = 0;
 	int col = 0;
 	int k = 0;
+	int m = 0;
+	int n = 0;
 	char **a;
 
 	if (str == NULL || str== "")
@@ -42,7 +44,20 @@ char **strtow(char *str)
 					return (NULL);
 		}
 
-
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			if (str[i] != ' ')
+			{
+				a[m][n] = str[i];
+				n++;
+			}
+			if (str[i] == ' ')
+			{
+				a[m][n] = '\0';
+				n = 0;
+				m++;
+			}
+		}
 			
 	}
 	else
