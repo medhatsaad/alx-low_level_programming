@@ -1,4 +1,4 @@
-# ifndef "0-object_like_macro.h"
-# define "0-object_like_macro.h"
+# ifndef _FILE_NAME_H_
+# define _FILE_NAME_H_
 # define SIZE 1024
 # endif
