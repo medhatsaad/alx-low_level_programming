@@ -17,5 +17,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 int namesize(char *s);
 int copyname(char *x, char *y);
+void free_dog(dog_t *d);
 dog_t *new_dog(char *name, float age, char *owner);
 #endif
