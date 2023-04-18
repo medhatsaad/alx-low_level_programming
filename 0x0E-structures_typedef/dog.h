@@ -16,6 +16,6 @@ typedef struct dog dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 int namesize(char *s);
-void copyname(char *x, char *y);
+int copyname(char *x, char *y);
 dog_t *new_dog(char *name, float age, char *owner);
 #endif

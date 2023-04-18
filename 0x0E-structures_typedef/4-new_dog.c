@@ -12,37 +12,30 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *a = name;
 	char *b = owner;
+	int sizea, sizeb;
 	dog_t *c;
 
 	c = malloc(sizeof(dog_t));
 	if (c)
 	{
-		if (a == NULL)
-			c->name = NULL;
+		(a == NULL) ? sizea = 0 : (sizea = namesize(a));
+		c->name = malloc((sizea + 1) * sizeof(char));
+		if (c->name)
+			(a == NULL) ? (c->name[0] = '\0') : copyname(a, c->name);
 		else
 		{
-			c->name = malloc((namesize(a) + 1) * sizeof(char));
-			if (c->name)
-				copyname(a, c->name);
-			else
-			{
-				free(c);
-				return (NULL);
-			}
+			free(c);
+			return (NULL);
 		}
 		c->age = age;
-		if (b == NULL)
-			c->owner = NULL;
+		(b == NULL) ? sizeb = 0 : (sizeb = namesize(b));
+		c->owner = malloc((sizeb + 1) * sizeof(char));
+		if (c->owner)
+			(b == NULL) ? (c->owner[0] = '\0') : copyname(b, c->owner);
 		else
 		{
-			c->owner = malloc((namesize(b) + 1) * sizeof(char));
-			if (c->owner)
-				copyname(b, c->owner);
-			else
-			{
-				free(c);
-				return (NULL);
-			}
+			free(c);
+			return (NULL);
 		}
 		return (c);
 	}
@@ -56,7 +49,7 @@ dog_t *new_dog(char *name, float age, char *owner)
  * @y: destination
  * Return: 0
  */
-void copyname(char *x, char *y)
+int copyname(char *x, char *y)
 {
 	int i;
 	int size = namesize(x);
@@ -64,6 +57,7 @@ void copyname(char *x, char *y)
 	for (i = 0; i < size; i++)
 		y[i] = x[i];
 	y[size] = '\0';
+	return (0);
 }
 /**
  * namesize - size of string
