@@ -10,35 +10,53 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *a ;
-	char *b ;
+	char *a;
+	char *b;
 	int sizea, sizeb;
 	dog_t *c;
 
-	printf("start");
 	a = name;
 	b = owner;
 	sizea = 0;
 	sizeb = 0;
-	/* (a == NULL) ? sizea = 0 : (sizea = namesize(a));
-	(b == NULL) ? sizeb = 0 : (sizeb = namesize(b)); */
-	c = (dog_t *) malloc(sizea + sizeb + 2 + 4);
+	(a == NULL) ? sizea = 0 : (sizea = namesize(a));
+	(b == NULL) ? sizeb = 0 : (sizeb = namesize(b));
+	c = malloc(sizeof(dog_t));
 	if (c)
 	{
-		(a == NULL) ? c->name[0] = '\0' : copyname(a, sizea, c->name);
+		if (a == NULL)
+			c->name = NULL;
+		else
+		{
+			c->name = malloc((sizea + 1) * sizeof(char));
+			if (c->name)
+				copyname(a, sizea, c->name);
+			else
+				return (NULL);
+		}
 		c->age = age;
-		(b == NULL) ? c->owner[0] = '\0' : copyname(b, sizeb, c->owner);
+		if (b == NULL)
+			c->owner = NULL;
+		else
+		{
+			c->owner = malloc((sizeb + 1) * sizeof(char));
+			if (c->owner)
+				copyname(b, sizeb, c->owner);
+			else
+				return (NULL);
+		}
 		return (c);
 	}
 	else
 		return (NULL);
-}	
+}
 
 /**
  * copyname - copy string
  * @x: source string
  * @size: size
  * @y: destination
+ * Return: 0
  */
 int copyname(char *x, int size, char *y)
 {
