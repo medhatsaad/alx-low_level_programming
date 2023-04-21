@@ -1,10 +1,17 @@
 # include <stdio.h>
 # include <stdlib.h>
-
+/**
+ * main - print code of main
+ * @argc: number of arg
+ * @argv: args
+ *
+ * Return: exit code
+ *
+ */
 int main(int argc, char *argv[])
 {
 	int i, b, size;
-	int (* p)(int, char **) = main;
+	int (*p)(int, char **) = main;
 	char *c;
 	char m;
 
