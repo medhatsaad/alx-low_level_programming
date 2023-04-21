@@ -4,7 +4,6 @@
 # include <stdlib.h>
 /**
  * print_all - print list of strings with separator
- * @separator: sep between numbers
  * @format: number of numbers
  *
  * Return: nothing
@@ -77,5 +76,10 @@ void print_float(va_list alist)
  */
 void print_string(va_list alist)
 {
-	printf("%s", va_arg(alist, char*));
+	char *c = va_arg(alist, char*);
+
+	if (c != NULL)
+		printf("%s", c);
+	else
+		printf("(nil)");
 }
