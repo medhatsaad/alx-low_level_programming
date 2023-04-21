@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < b; i++)
 	{
 		m = c[i];
-		printf("%x ", m);
+		printf("%02hhx ", m);
 	}
 	printf("\n");
 	return (0);
