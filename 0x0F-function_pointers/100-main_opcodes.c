@@ -28,11 +28,11 @@ int main(int argc, char *argv[])
 	}
 	c = (char *)p;
 	size = sizeof(p);
-	for (i = 0; i < b; i++)
+	for (i = 0; i < b - 1; i++)
 	{
 		m = c[i];
 		printf("%02hhx ", m);
 	}
-	printf("\n");
+	printf("%02hhx\n", c[b - 1]);
 	return (0);
 }
