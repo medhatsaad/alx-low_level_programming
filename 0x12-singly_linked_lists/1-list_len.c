@@ -19,7 +19,5 @@ size_t list_len(const list_t *h)
 			i++;
 		}
 	}
-	else
-		i = -1;
 	return (i);
 }
