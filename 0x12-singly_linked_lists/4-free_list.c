@@ -8,6 +8,8 @@ void free_list(list_t *head)
 {
 	list_t *next;
 
+	if (head == NULL)
+		exit(-1);
 	while (head->next != NULL)
 	{
 		next = head->next;
