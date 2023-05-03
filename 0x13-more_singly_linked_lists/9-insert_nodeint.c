@@ -1,7 +1,7 @@
 # include "lists.h"
 # include <stdlib.h>
 /**
- * inser_nodeint_at_index - insert vlue n at index 
+ * insert_nodeint_at_index - insert vlue n at index
  * @head: address of list
  * @idx: index
  * @n: value
