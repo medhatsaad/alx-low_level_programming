@@ -14,6 +14,8 @@ listint_t *reverse_listint(listint_t **head)
 	/* setup Node 0  */
 	n = (*head)->next;
 	(*head)->next = NULL;
+	if (n->next == NULL)
+		return (*head);
 	/* Setup nodes*/
 	while (n->next != NULL)
 	{
