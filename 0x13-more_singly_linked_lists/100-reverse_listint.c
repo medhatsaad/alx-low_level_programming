@@ -12,10 +12,10 @@ listint_t *reverse_listint(listint_t **head)
 	if (head == NULL && *head == NULL)
 		return (NULL);
 	/* setup Node 0  */
+	if ((*head)->next == NULL)
+		return (*head);
 	n = (*head)->next;
 	(*head)->next = NULL;
-	if (n->next == NULL)
-		return (*head);
 	/* Setup nodes*/
 	while (n->next != NULL)
 	{
