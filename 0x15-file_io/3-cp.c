@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
 	{
 		a = read(fd_from, buffer, 1024);
 		if (a < 0)
-			exit(-1);
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		b = write(fd_to, buffer, a);
 		if (b < 0)
 			exit(-1);
@@ -68,7 +71,7 @@ void _close(int fd_to, int fd_from)
 	}
 	if (close(fd_to) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_from);
+		dprintf(2, "Error: Can't close fd %d", fd_from);
 		exit(100);
 	}
 }
