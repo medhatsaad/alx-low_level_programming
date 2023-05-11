@@ -50,7 +50,10 @@ int main(int argc, char *argv[])
 		}
 		b = write(fd_to, buffer, a);
 		if (b < 0)
-			exit(-1);
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 	_close(fd_to, fd_from);
 	free(buffer);
