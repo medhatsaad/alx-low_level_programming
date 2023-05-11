@@ -17,8 +17,11 @@ int create_file(const char *filename, char *text_content)
 		fd = open(filename, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 	if (fd < 0)
 		return (-1);
-	for (i = 0; text_content[i] != '\0'; i++)
-		size++;
+	if (text_content == NULL)
+	{
+		close(fd);
+		return (1);
+	}
 	if (text_content[0] == 'N')
 		if (text_content[1] == 'U')
 			if (text_content[2] == 'L')
@@ -28,6 +31,13 @@ int create_file(const char *filename, char *text_content)
 						close(fd);
 						return (1);
 					}
+	for (i = 0; text_content[i] != '\0'; i++)
+		size++;
+	if (size == 0)
+	{
+		close(fd);
+		return (1);
+	}
 	if (write(fd, text_content, size))
 	{
 		close(fd);
